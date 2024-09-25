@@ -42,7 +42,7 @@ func NewMemState() Store {
 	}
 }
 
-// Get ... Fetches a string value slice from the store
+// GetSlice ... Fetches a string slice value from the store
 func (ss *stateStore) GetSlice(_ context.Context, key *core.StateKey) ([]string, error) {
 	ss.RLock()
 	defer ss.RUnlock()
